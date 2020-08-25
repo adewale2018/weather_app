@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import Location from "./Location";
 import Icon from "./Icon";
 
-function WeatherCard({ temp }) {
+function WeatherCard({ temp, country, city }) {
   let highColor = 0;
   let lowColor = 0;
   let bg = null;
@@ -42,7 +42,7 @@ function WeatherCard({ temp }) {
   `;
   return (
     <Card className='card'>
-      <Location />
+      <Location country={country} city={city} />
       <Icon />
       <h1 className='temp'>20 °C</h1>
       <h3 className='condition'>Cloudy</h3>

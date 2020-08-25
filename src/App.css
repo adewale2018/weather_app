@@ -1,7 +1,10 @@
 .App {
   margin: 0 auto;
   color: white;
+  display: flex;
+  justify-content: space-around;
 }
+
 /* .card {
   margin: 0 auto;
   background: linear-gradient(to bottom, red, pink);
@@ -17,7 +20,7 @@
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 } */
-.location {
+/* .location {
   text-align: center;
 }
 .city {
@@ -37,7 +40,7 @@
 .condition {
   font-family: 'Merriweather', serif;
   font-size: 1.2rem;
-}
+} */
 
 /* font-family: 'Fira Sans', sans-serif;
 font-family: 'Merriweather', serif; */

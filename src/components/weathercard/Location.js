@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-function Location() {
+function Location({ country, city }) {
   const Container = styled.div`
     text-align: center;
   `;
@@ -16,8 +16,8 @@ function Location() {
   `;
   return (
     <Container>
-      <City>Lagos</City>
-      <Country>Nigeria</Country>
+      <City>{city}</City>
+      <Country>{country}</Country>
     </Container>
   );
 }
