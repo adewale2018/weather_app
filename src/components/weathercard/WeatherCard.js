@@ -1,12 +1,19 @@
 import React from "react";
-import  styled  from "@emotion/styled";
+import styled from "@emotion/styled";
 
-import Location from './Location';
+import Location from "./Location";
+import Icon from "./Icon";
 
-function WeatherCard(props) {
+function WeatherCard({ temp }) {
+  let highColor = (1 - (temp - 12) / 28) * 255;
+  let lowColor = highColor - 150;
   const Card = styled.div`
     margin: 0 auto;
-    background: linear-gradient(to bottom, blue, lightblue);
+    background: linear-gradient(
+      to top,
+      rgb(255, ${highColor}, 0),
+      rgb(255, ${lowColor}, 0)
+    );
     width: 200px;
     height: 240px;
     display: flex;
@@ -22,7 +29,7 @@ function WeatherCard(props) {
   return (
     <Card className='card'>
       <Location />
-      <img className='icon' src='' alt='Weather Icon' />
+      <Icon />
       <h1 className='temp'>20 °C</h1>
       <h3 className='condition'>Cloudy</h3>
     </Card>
